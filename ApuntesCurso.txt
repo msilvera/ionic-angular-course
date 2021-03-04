@@ -1,0 +1,65 @@
+ionic serve
+
+
+ionic generate page mypagename
+ex -> ionic generate page places/offers/new-offer
+
+ionic generate service places/places
+
+
+<ion-content padding>
+<ion-grid>
+  <ion-row>
+    <ion-col size="12" size-sm="8" offset-sm="2" class="ion-text-center">
+	 <ion-card>
+        <ion-card-header>
+          <ion-card-title>{{ loadedPlaces[0].title }}</ion-card-title>
+          <ion-card-subtitle>{{ loadedPlaces[0].price | currency }} / Night </ion-card-subtitle>
+        </ion-card-header>
+        <ion-img [src]=" loadedPlaces[0].imageUrl"></ion-img>
+      <ion-card-content>
+          <p>{{ loadedPlaces[0].description }}</p>
+      </ion-card-content>
+      <div class="ion-text-right" padding>
+        <ion-button 
+          fill="clear"
+          color="primary"
+          [routerLink] = "[
+            '/', 
+            'places', 
+            'tabs', 
+            'discover', 
+            'loadedPlaces[0].id'
+            ]" 
+          >
+          More
+        </ion-button>
+      </div>
+      </ion-card>
+	  
+------------
+
+//for modal
+ionic generate component bookings/create-booking
+	  
+	  
+Ctrl+K Ctrl+C Add line comment
+Ctrl+K Ctrl+U Remove line comment
+
+
+
+
+
+-----------------
+
+
+How to start any new Node.js project:
+
+$ npx license mit > LICENSE
+$ npx gitignore node
+$ npx covgen YOUR_EMAIL_ADDRESS
+$ npm init -y
+
+You're ready to start coding.
+
+
